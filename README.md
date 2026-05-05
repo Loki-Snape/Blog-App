@@ -89,6 +89,7 @@ blog-capstone/
 ├── views/
 │   ├── index.ejs          # Homepage (blog feed)
 │   ├── create.ejs         # Create post page
+│   ├── edit.ejs           # Edit posts
 │   └── partials/
 │       ├── header.ejs     # Navigation & head section
 │       └── footer.ejs     # Footer component
@@ -159,17 +160,11 @@ We welcome contributions! Here's how:
 
 ---
 
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
 ## 👨‍💻 Author
 
-**Angela's Blog Capstone**
+**Mridul's Blog Capstone**
 
-Created as a capstone project to showcase full-stack web development skills.
+Created as a capstone project to showcase express and ejs web development skills.
 
 ---
 
@@ -181,7 +176,7 @@ Have questions or found a bug? [Open an issue](https://github.com/Loki-Snape/Blo
 
 <div align="center">
 
-**Made with ❤️ and ☕**
+**Made By Mridul Jha**
 
 If you found this project helpful, please consider giving it a ⭐!
 
