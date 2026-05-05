@@ -1,0 +1,229 @@
+/* =========================================
+   1. CSS Variables (The "Art Gallery" Palette)
+   ========================================= */
+:root {
+    --canvas-bg: #f9f9f9;
+    --gallery-white: #ffffff;
+    --ink-black: #222222;
+    --charcoal: #4a4a4a;
+    --accent-color: #3b82f6;
+    --accent-hover: #2563eb;
+    --danger-red: #ef4444;
+    --danger-hover: #dc2626;
+    --border-light: #e5e5e5;
+    
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --border-radius: 8px;
+}
+
+/* =========================================
+   2. Reset & Typography
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--canvas-bg);
+    color: var(--ink-black);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Keeps footer at the bottom */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================
+   3. Header & Navigation
+   ========================================= */
+.site-header {
+    background-color: var(--gallery-white);
+    border-bottom: 1px solid var(--border-light);
+    padding: var(--spacing-md) 5%;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* =========================================
+   4. Main Layout Containers
+   ========================================= */
+main {
+    flex: 1; /* Pushes the footer down */
+    max-width: 800px;
+    margin: var(--spacing-lg) auto;
+    padding: 0 var(--spacing-md);
+    width: 100%;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--ink-black);
+    padding-bottom: var(--spacing-sm);
+}
+
+/* =========================================
+   5. Buttons
+   ========================================= */
+button, .btn-primary, .btn-secondary, .btn-danger, .btn-cancel {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--gallery-white);
+}
+
+.btn-primary:hover { background-color: var(--accent-hover); }
+
+.btn-secondary {
+    background-color: var(--charcoal);
+    color: var(--gallery-white);
+}
+
+.btn-secondary:hover { background-color: var(--ink-black); }
+
+.btn-danger {
+    background-color: var(--danger-red);
+    color: var(--gallery-white);
+}
+
+.btn-danger:hover { background-color: var(--danger-hover); }
+
+.btn-cancel {
+    background-color: transparent;
+    color: var(--charcoal);
+    border: 1px solid var(--charcoal);
+}
+
+.btn-cancel:hover { background-color: var(--border-light); }
+
+/* =========================================
+   6. Post Feed & Cards
+   ========================================= */
+.post-feed {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.post-card {
+    background-color: var(--gallery-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-light);
+}
+
+.post-title {
+    margin-bottom: var(--spacing-sm);
+    color: var(--ink-black);
+}
+
+.post-content {
+    color: var(--charcoal);
+    margin-bottom: var(--spacing-md);
+    white-space: pre-wrap; /* Preserves line breaks from textarea */
+}
+
+.post-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    border-top: 1px solid var(--border-light);
+    padding-top: var(--spacing-md);
+}
+
+/* =========================================
+   7. Forms (Create/Edit)
+   ========================================= */
+.editor-form {
+    background-color: var(--gallery-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical; /* Allows resizing only up and down */
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+/* =========================================
+   8. Footer
+   ========================================= */
+.site-footer {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background-color: var(--gallery-white);
+    border-top: 1px solid var(--border-light);
+    color: var(--charcoal);
+    margin-top: auto;
+}

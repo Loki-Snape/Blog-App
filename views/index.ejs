@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+
+<main class="blog-container">
+    <header class="page-header">
+        <h1>My Journal</h1>
+        <a href="/create" class="btn-primary">Write New Post</a>
+    </header>
+
+    <section class="post-feed">
+        
+            <% aP.forEach(el => { %>
+                <article class="post-card">
+                <h2 class="post-title"><%= el.t %></h2>
+                <p class="post-content">
+                <%= el.c %>
+                </p>
+                    <footer class="post-actions">
+                        <a href="/edit/<%= el.i %>" class="btn-secondary">Edit</a>
+                        
+                        <form action="/delete/<%= el.i %>" method="POST" class="delete-form">
+                            <button type="submit" class="btn-danger">Delete</button>
+                        </form>
+                    </footer>
+                </article>
+            <% }); %>
+            
+
+    </section>
+</main>
+
+<%- include("partials/footer.ejs") %>
