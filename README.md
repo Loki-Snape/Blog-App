@@ -37,7 +37,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/blog-capstone.git
+   git clone https://github.com/Loki-Snape/Blog-App.git
    cd blog-capstone
    ```
 
@@ -175,7 +175,7 @@ Created as a capstone project to showcase full-stack web development skills.
 
 ## 🙋‍♀️ Support
 
-Have questions or found a bug? [Open an issue](https://github.com/yourusername/blog-capstone/issues) or reach out!
+Have questions or found a bug? [Open an issue](https://github.com/Loki-Snape/Blog-App//issues) or reach out!
 
 ---
 
